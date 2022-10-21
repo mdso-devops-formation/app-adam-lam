@@ -1,10 +1,11 @@
-FROM node:16-alpine3.6 AS build
-COPY ./package.json /front
-WORKDIR /front
+FROM node:16-alpine AS build
+RUN mkdir app
+COPY ./package.json /app
+WORKDIR /app
 RUN npm install
-COPY . /front
+COPY . /app
 RUN npm run build
 
-FROM nginx:alpine3.6
-COPY --from=build build/. /etc/www/
-COPY ./config.conf ./etc/nginx/d.conf/
+FROM nginx:latest
+COPY --from=build /app/build/. /etc/www/
+COPY ./config.conf ./var/nginx/d.conf/
