@@ -1,0 +1,67 @@
+body {
+  display: grid;
+  background-color: #311B92;
+  background-image: url("./font.jpeg");
+  color: #FFEBEE;
+  width: auto;
+  align-items: center;
+}
+.titre {
+  text-align: center;
+  font-family: Lora, sans-serif;
+}
+.boite {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "" "formulaire" "";
+  align-items: center;
+  margin: 20px;
+}
+
+.formulaire {
+  grid-area: formulaire;
+  border: 2px outset;
+  border-radius: 20px;
+  width: 250px;
+  padding: 20px;
+  animation: anima 0.5s infinite;
+}
+
+input, .lab {
+  margin-left: 40px;
+}
+
+#submit {
+  position: relative;
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  margin-left: 60px;
+  font-family: Montserrat, sans-serif;
+}
+
+@keyframes anima {
+  0% {
+    border-top-color: #3E2723;
+    border-width: 5px;
+  }
+  25% {
+    border-top-color: #3E2723;
+    border-width: 5px;
+  }
+  
+  50% {
+    border-right-color: #3E2723;
+    border-width: 5px;
+  }
+  
+  75% {
+    border-bottom-color: #3E2723;
+    border-width: 5px;
+  }
+  
+  100% {
+    border-left-color: #3E2723;
+    border-width: 5px;
+  }
+}
