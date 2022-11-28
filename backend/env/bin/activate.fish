@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/startlingadama/Code_source_to_production/githome/application/adam-lam/backend/env"
+set -gx VIRTUAL_ENV "/home/startlingadama/Code_source_to_production/githome/application/adam-lam/login-front/backend/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

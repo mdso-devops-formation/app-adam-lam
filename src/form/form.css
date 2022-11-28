@@ -1,25 +1,24 @@
 body {
-  display: grid;
   background-color: #311B92;
   background-image: url("./font.jpeg");
+  background-size: 100%;
   color: #FFEBEE;
-  width: auto;
-  align-items: center;
 }
+
+.boite {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+}
+
 .titre {
   text-align: center;
   font-family: Lora, sans-serif;
 }
-.boite {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "" "formulaire" "";
-  align-items: center;
-  margin: 20px;
-}
 
 .formulaire {
-  grid-area: formulaire;
   border: 2px outset;
   border-radius: 20px;
   width: 250px;
@@ -27,17 +26,16 @@ body {
   animation: anima 0.5s infinite;
 }
 
-input, .lab {
-  margin-left: 40px;
-}
-
 #submit {
   position: relative;
+  border-radius: 10px;
   text-align: center;
-  width: 120px;
+  width: 150px;
   height: 30px;
-  margin-left: 60px;
+  margin-left: 20px;
   font-family: Montserrat, sans-serif;
+  font-weight: 20px;
+  font-size: 20px;
 }
 
 @keyframes anima {
@@ -49,7 +47,6 @@ input, .lab {
     border-top-color: #3E2723;
     border-width: 5px;
   }
-  
   50% {
     border-right-color: #3E2723;
     border-width: 5px;
@@ -64,4 +61,11 @@ input, .lab {
     border-left-color: #3E2723;
     border-width: 5px;
   }
+}
+
+
+@media screen and (max-width: 950px){
+        .boite {
+                margin-top: 25%;
+        }
 }
